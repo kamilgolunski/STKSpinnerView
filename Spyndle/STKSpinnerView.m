@@ -115,7 +115,7 @@
 
 - (float)radius
 {
-    CGRect r = CGRectInset([self bounds], [self wellThickness] * -0.5, [self wellThickness] * -0.5);
+    CGRect r = CGRectInset([self bounds], [self wellThickness] * -0.5 + 1, [self wellThickness] * -0.5 + 1);
     float w = r.size.width;
     float h = r.size.height;
     if(w > h)
