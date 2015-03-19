@@ -28,15 +28,15 @@
     [[self imageLayer] setMask:m];
     [self setMaskLayer:m];
     
-    CAShapeLayer *w = [CAShapeLayer layer];
-    [[self layer] addSublayer:w];
-    [w setStrokeColor:[[UIColor grayColor] CGColor]];
-    [w setFillColor:[[UIColor clearColor] CGColor]];
-    [w setShadowColor:[[UIColor darkGrayColor] CGColor]];
-    [w setShadowRadius:2];
-    [w setShadowOpacity:1];
-    [w setShadowOffset:CGSizeZero];
-    [self setWellLayer:w];
+//    CAShapeLayer *w = [CAShapeLayer layer];
+//    [[self layer] addSublayer:w];
+//    [w setStrokeColor:[[UIColor grayColor] CGColor]];
+//    [w setFillColor:[[UIColor clearColor] CGColor]];
+//    [w setShadowColor:[[UIColor darkGrayColor] CGColor]];
+//    [w setShadowRadius:2];
+//    [w setShadowOpacity:1];
+//    [w setShadowOffset:CGSizeZero];
+//    [self setWellLayer:w];
 
     CAShapeLayer *s = [CAShapeLayer layer];
     [s setStrokeColor:[[UIColor blueColor] CGColor]];
@@ -115,7 +115,7 @@
 
 - (float)radius
 {
-    CGRect r = CGRectInset([self bounds], [self wellThickness] / 2.0, [self wellThickness] / 2.0);
+    CGRect r = CGRectInset([self bounds], [self wellThickness] * -0.5, [self wellThickness] * -0.5);
     float w = r.size.width;
     float h = r.size.height;
     if(w > h)
@@ -130,10 +130,14 @@
     
     CGRect bounds = [self bounds];
     float wt = [self wellThickness];
-    CGRect outer = CGRectInset([self bounds], wt / 2.0, wt / 2.0);
-    CGRect inner = CGRectInset([self bounds], wt, wt);
+    CGRect outer = CGRectInset([self bounds], -0.5 * wt,  -0.5 * wt);
     
-    UIBezierPath *innerPath = [UIBezierPath bezierPathWithOvalInRect:inner];
+    self.wellLayer.masksToBounds = NO;
+    self.layer.masksToBounds = NO;
+    self.spinLayer.masksToBounds = NO;
+    self.maskLayer.masksToBounds = NO;
+    self.imageLayer.masksToBounds = NO;
+    UIBezierPath *innerPath = [UIBezierPath bezierPathWithOvalInRect:bounds];
     UIBezierPath *outerPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CGRectGetMidX(outer), CGRectGetMidY(outer))
                                                              radius:[self radius]
                                                          startAngle:-M_PI_2 endAngle:(2.0 * M_PI - M_PI_2) clockwise:YES];

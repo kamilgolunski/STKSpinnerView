@@ -19,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[self spinnerView] setImage:[UIImage imageNamed:@"jc.png"]];
+    [[self spinnerView] setImage:[UIImage imageNamed:@"circle.png"]];
 
     [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(spinit:) userInfo:nil repeats:YES];
 

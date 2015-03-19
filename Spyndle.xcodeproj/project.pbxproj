@@ -21,6 +21,7 @@
 		BEE6DD671722488300F46601 /* jc.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE6DD661722488300F46601 /* jc.png */; };
 		BEE6DD6A1722488E00F46601 /* STKSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE6DD691722488E00F46601 /* STKSpinnerView.m */; };
 		BEE6DD6C17224A0900F46601 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6DD6B17224A0900F46601 /* QuartzCore.framework */; };
+		CE4FD0B81ABB751E00733D17 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4FD0B71ABB751E00733D17 /* circle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		BEE6DD681722488E00F46601 /* STKSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKSpinnerView.h; sourceTree = "<group>"; };
 		BEE6DD691722488E00F46601 /* STKSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKSpinnerView.m; sourceTree = "<group>"; };
 		BEE6DD6B17224A0900F46601 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE4FD0B71ABB751E00733D17 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		BEE6DD4A172247F300F46601 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE4FD0B71ABB751E00733D17 /* circle.png */,
 				BEE6DD661722488300F46601 /* jc.png */,
 				BEE6DD4B172247F300F46601 /* Spyndle-Info.plist */,
 				BEE6DD4C172247F300F46601 /* InfoPlist.strings */,
@@ -175,6 +178,7 @@
 				BEE6DD56172247F300F46601 /* Default.png in Resources */,
 				BEE6DD58172247F300F46601 /* Default@2x.png in Resources */,
 				BEE6DD5A172247F300F46601 /* Default-568h@2x.png in Resources */,
+				CE4FD0B81ABB751E00733D17 /* circle.png in Resources */,
 				BEE6DD60172247F400F46601 /* STKViewController.xib in Resources */,
 				BEE6DD671722488300F46601 /* jc.png in Resources */,
 			);
@@ -278,6 +282,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Spyndle/Spyndle-Prefix.pch";
 				INFOPLIST_FILE = "Spyndle/Spyndle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -289,6 +294,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Spyndle/Spyndle-Prefix.pch";
 				INFOPLIST_FILE = "Spyndle/Spyndle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -313,6 +319,7 @@
 				BEE6DD65172247F400F46601 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
